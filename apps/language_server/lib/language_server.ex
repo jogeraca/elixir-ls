@@ -22,7 +22,8 @@ defmodule ElixirLS.LanguageServer do
        name: ElixirLS.LanguageServer.JsonRpc, language_server: LanguageServer.PacketRouter},
       {ElixirLS.LanguageServer.Providers.WorkspaceSymbols, []},
       {ElixirLS.LanguageServer.Tracer, []},
-      {ElixirLS.LanguageServer.ExUnitTestTracer, []}
+      {ElixirLS.LanguageServer.ExUnitTestTracer, []},
+      {ElixirLS.LanguageServer.Providers.WorkspaceSymbols, [args: [log?: true]]}
     ]
 
     opts = [strategy: :one_for_one, name: LanguageServer.Supervisor, max_restarts: 0]
